@@ -1,3 +1,5 @@
+package com.mycompany.juegocarros.clases;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,20 +10,14 @@
  *
  * @author diego
  */
-public class conductor {
-    
-     private String nombre;
+public class Conductor extends Jugador {
 
-    public conductor() {
+    public Conductor(String nombre) {
+        super(nombre, 0);
     }
 
-    public conductor(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String nombre() {
-        return nombre;
-
+    public Integer AdelantarDados(){
+        return (int)(Math.random()* 6)+ 1;
     }
     
 }

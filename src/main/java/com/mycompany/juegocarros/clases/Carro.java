@@ -1,3 +1,5 @@
+package com.mycompany.juegocarros.clases;
+
 
 import java.awt.Color;
 
@@ -10,18 +12,18 @@ import java.awt.Color;
  *  
  * @author diego
  */
-public class carro {
+public class Carro {
 
-    protected conductor conductor;
+    protected Conductor conductor;
     protected Integer distancia;
-    protected Color color;
-    protected Juego juegoId;
 
-    public carro(conductor conductor, Integer distancia, Color color, Juego juegoId) {
+    public Conductor getConductor() {
+        return conductor;
+    }
+
+    public Carro(Conductor conductor, Integer distancia ) {
         this.conductor = conductor;
         this.distancia = distancia;
-        this.color = color;
-        this.juegoId = juegoId;
     }
 
     public void setDistancia(Integer distancia) {
@@ -32,13 +34,7 @@ public class carro {
         return distancia;
     }
 
-    public Color getColor() {
-        return color;
-    }
 
-    public Juego getJuegoId() {
-        return juegoId;
-    }
-    
+
     
 }

@@ -1,5 +1,5 @@
+package com.mycompany.juegocarros.clases;
 
-import java.util.UUID;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -12,50 +12,47 @@ import java.util.UUID;
  * @author diego
  */
 public class Carril {
-    
-    protected UUID carroId;
-    protected UUID juegoId;
+    protected Carro carro;
     protected Posicion posicion;
     protected Integer metros;
     protected Boolean desplazamientoFinal;
     
-    public Carril(UUID carroId, UUID juegoId, Posicion posicion, Integer metros, Boolean desplazamientoFinal) {
-        this.carroId = carroId;
-        this.juegoId = juegoId;
+    public Carril(Carro carro , Posicion posicion, Integer metros, Boolean desplazamientoFinal) {
+        this.carro = carro;
         this.posicion = posicion;
         this.metros = metros;
         this.desplazamientoFinal = desplazamientoFinal;
     }
 
+    public Carro getCarro() {
+        return carro;
+    }
+
+    public void setDesplazamientoFinal(Boolean desplazamientoFinal) {
+        this.desplazamientoFinal = desplazamientoFinal;
+    }
+
     public void alcanzarLaMeta() {
         if (posicionActual() >= posicionDeseada()) {
-            desplazamientoFinal = true;
+            desplazamientoFinal = Boolean.TRUE;
         }
 
     }
 
-    public void moverCarro(Posicion posicion, Integer cantidad) {
-        this.posicion = posicion;
-        posicion.setActual(posicion.actual() + cantidad);
-        alcanzarLaMeta();
+    public void moverCarro(Integer Avance) {
+        this.carro.setDistancia(this.carro.getDistancia()+ Avance);
     }
 
     public Integer metros() {
-
         return metros;
-
     }
 
     public Posicion posicion() {
-
         return posicion;
-
     }
 
     public Integer posicionActual() {
-
         return posicion.actual();
-
     }
 
     public Integer posicionDeseada() {

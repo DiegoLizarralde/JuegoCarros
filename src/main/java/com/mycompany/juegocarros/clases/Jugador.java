@@ -1,3 +1,5 @@
+package com.mycompany.juegocarros.clases;
+
 
 import java.util.UUID;
 
@@ -11,24 +13,16 @@ import java.util.UUID;
  *
  * @author diego
  */
-public class jugador {
+public class Jugador {
     
-    private UUID id_jugador;
     private String nombre;
     private Integer puntos;
 
-    public jugador(UUID id_jugador) {
-        this.id_jugador = id_jugador;
+    public Jugador(String nombre, Integer puntos) {
+        this.nombre = nombre;
+        this.puntos = puntos;
     }
-
-    public void setId_jugador(UUID id_jugador) {
-        this.id_jugador = id_jugador;
-    }
-
-    public UUID getId_jugador() {
-        return id_jugador;
-    }
-
+    
     public String getNombre() {
         return nombre;
     }
