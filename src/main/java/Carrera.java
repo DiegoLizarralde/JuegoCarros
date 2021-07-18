@@ -1,7 +1,7 @@
 
 
-
 import com.mycompany.juegocarros.clases.*;
+import com.mycompany.juegocarros.datos.BD;
 
 import java.awt.Color;
 import java.util.ArrayList;
@@ -101,6 +101,13 @@ public class Carrera {
             podio.asignarPrimerLugar(OrdenLLegada.get(0));
             podio.asignarSegundoLugar(OrdenLLegada.get(1));
             podio.asignarTercerLugar(OrdenLLegada.get(2));
+
+            BD bd = new BD();
+            bd.Conectar();
+
+            bd.insertar("INSERT INTO ganadores VALUES ("+null+",'"+podio.primerLugar().getNombre()+"','"+podio.segundoLugar().getNombre()+"','"+podio.tercerLugar().getNombre()+"');");
+
+
 
             System.out.println(podio);
 

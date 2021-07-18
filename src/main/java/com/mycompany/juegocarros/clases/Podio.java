@@ -25,9 +25,9 @@ public class Podio {
     @Override
     public String toString() {
         return "Podio " +
-                "primerLugar = " + primerLugar.getNombre() +
-                ", segundoLugar = " + segundoLugar.getNombre() +
-                ", tercerLugar = " + tercerLugar.getNombre() ;
+                "primer Lugar = " + primerLugar.getNombre() +
+                ", segundo Lugar = " + segundoLugar.getNombre() +
+                ", tercer Lugar = " + tercerLugar.getNombre() ;
     }
 
     public void asignarPrimerLugar(Jugador jugador) {
